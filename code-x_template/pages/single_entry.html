@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Code-X | Single Entry</title>
+</head>
+
+<body class="light_theme">
+
+    <nav class="navbar light_navbar">
+        <div class="nav_container">
+
+            <div class="nav_title">
+                <div>
+                    <h2><a href="../index.html" class="light_nav_logo">Code-X</a></h2>
+                </div>
+                <div class="toggle_nav">
+                    <div class="line light_line"></div>
+                    <div class="line light_line"></div>
+                    <div class="line light_line"></div>
+                    <div class="line light_line"></div>
+
+                </div>
+            </div>
+
+            <ul class="nav_list">
+                <li class="nav_li light_nav_li"><a href="" class="light_active_li">All</a></li>
+                <li class="nav_li light_nav_li"><a href="">CSS</a></li>
+                <li class="nav_li light_nav_li"><a href="">JavaScript</a></li>
+
+                <div class="theme_btns light_theme_btn_style">
+                    <button class="light_theme_btn active_theme">Light</button>
+                    <button class="dark_theme_btn">Dark</button>
+                </div>
+            </ul>
+
+            <div class="desk_search_div">
+                <hr>
+                <form action="">
+                    <input type="text" id="nav_search_bar" placeholder="Search....">
+                    <button id="submit_search">🔍</button>
+                </form>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="prog_bar">
+        <div class="progression"></div>
+    </div>
+
+
+    <main>
+
+        <div class="mobile_heading">
+            <h2><u>All Code</u></h2>
+        </div>
+
+        <div class="mobile_search_div light_search_div">
+            <form action="">
+
+                <input type="text" id="nav_search_bar" placeholder="Search....">
+                <button id="submit_search">🔍</button>
+            </form>
+        </div>
+
+
+        <div class="single_entry_container">
+            <h1 class="single_entry_title">Toggle navbar</h1>
+            <div class="entry_date light_entry_date">09.29.2021</div>
+            <div class="single_entry_code_desc">
+                The Element.classList is a read-only property that returns a live DOMTokenList collection of the class attributes of
+                the
+                element. This can then be used to manipulate the class list.
+            
+                Using classList is a convenient alternative to accessing an element's list of classes as a space-delimited string
+                via
+                element.className.
+            </div>
+
+            <!-- HTML  -->
+            <div class="single_entry_code light_single_entry_code">
+                <div class="code_type single_ctype html">Html ▼</div>
+                <div class="single_entry_code_container">
+            
+                    <pre class="code_format"><code>
+                        &lt;nav class="navbar">
+                            &lt;div class="nav_container">
+                        
+                                &lt;div class="nav_title">
+                                    &lt;div>
+                                        &lt;h2>&lt;a href="../index.html" class="nav_logo">Code-X&lt;/a>&lt;/h2>
+                                    &lt;/div>
+                                    &lt;div class="toggle_nav">
+                                        &lt;div class="line">&lt;/div>
+                                        &lt;div class="line">&lt;/div>
+                                        &lt;div class="line">&lt;/div>
+                                        &lt;div class="line">&lt;/div>
+                                    &lt;/div>
+                                &lt;/div>
+                        
+                                &lt;ul class="nav_list">
+                                    &lt;li class="nav_li">&lt;a href="" class="active_li">All&lt;/a>&lt;/li>
+                                    &lt;li class="nav_li">&lt;a href="">CSS&lt;/a>&lt;/li>
+                                    &lt;li class="nav_li">&lt;a href="">JavaScript&lt;/a>&lt;/li>
+                                &lt;/ul>
+                        
+                            &lt;/div>
+                        &lt;/nav>
+                    </code></pre>
+            
+                </div>
+            </div>
+
+            <!-- CSS  -->
+            <div class="single_entry_code light_single_entry_code">
+                <div class="code_type single_ctype css">CSS ▼</div>
+                <div class="single_entry_code_container">
+            
+                    <pre class="code_format"><code>
+                        .navbar {
+                            position: fixed;
+                            top: 0;
+                            width: 100%;
+                            margin: 0;
+                            background-color: #e9ecef;
+                            font-family: 'Play', sans-serif;
+                        }
+                        
+                        .nav_container {
+                            margin: 20px;
+                        }
+                        
+                        .nav_title {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+                        
+                        .nav_logo {
+                            text-decoration: none;
+                            color: black;
+                        }
+                        
+                        .toggle_nav {
+                            height: 30px;
+                            width: 25px;
+                            cursor: pointer;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            float: right;
+                        }
+                    </code></pre>
+            
+                </div>
+            </div>
+
+            <!-- JS  -->
+            <div class="single_entry_code light_single_entry_code">
+                <div class="code_type single_ctype js">JS ▼</div>
+                <div class="single_entry_code_container">
+            
+                    <pre class="code_format"><code>
+                        class MobileNav {
+                            constructor() {
+                                this.toggleNavBtn = document.querySelector('.toggle_nav');
+                                this.navList = document.querySelector('.nav_list');
+                                this.toggleNav();
+                            }
+
+                            toggleNav() {
+                                this.toggleNavBtn.addEventListener('click', () => {
+                                    this.navList.classList.toggle('nav_list_open');
+                                });
+                            }
+
+                        }
+
+                        new MobileNav();
+                    </code></pre>
+            
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        <div class="footer_container">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+        <div class="p_cont">
+            <p>© Code-X 2021</p>
+        </div>
+    </footer>
+
+
+
+    <script src="../js/modules/nav.js"></script>
+    <script src="../js/modules/prog_bar.js"></script>
+    <script src="../js/modules/minMaxCode.js"></script>
+    <script src="../js/modules/codeDisplay.js"></script>
+    <script src="../js/modules/theme.js"></script>
+
+</body>
+
+</html>

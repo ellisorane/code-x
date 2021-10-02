@@ -1,0 +1,54 @@
+@import url('css/nav/nav.css');
+@import url('css/prog_bar.css');
+@import url('css/entry.css');
+@import url('css/single_entry.css');
+@import url('css/footer.css');
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+html, body {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    transition: color 0.5s;
+    transition: background-color 0.5s;
+}
+
+.light_theme {
+    background-color: #f8f9fa;
+    color: black;
+}
+
+.dark_theme {
+    background-color: #212529;
+    color: #f8f9fa;
+}
+
+.code_format {
+    white-space: pre-wrap;
+}
+
+.mobile_heading {
+    font-family: 'Play', sans-serif;
+    text-transform: uppercase;
+}
+
+main {
+    padding: 150px 10px;
+}
+
+@media (min-width: 1280px) {
+
+    main {
+        margin-left: 286px;
+        padding: 200px 15px;
+    }
+
+    .mobile_heading {
+        display: none;
+    }
+
+}
