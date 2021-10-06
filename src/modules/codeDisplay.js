@@ -1,7 +1,7 @@
 class Code {
     constructor() {
         this.codeFormat = document.querySelectorAll('.code_format');
-        // this.formatCode();
+        this.formatCode();
     }
 
     formatCode() {
@@ -12,4 +12,4 @@ class Code {
 
 }
 
-export default Code;
+new Code();

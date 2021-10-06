@@ -1,47 +1,88 @@
-<?php
-/**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package WordPress
- * @subpackage Twenty_Nineteen
- * @since Twenty Nineteen 1.0
- */
+<?php get_header(); ?>
 
-get_header();
-?>
+    <div class="entries_container">
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+        <!-- Entry begins -->
+        <div class="entry">
+            <div class="entry_info"><a href="">
+                <h2 class="entry_title"><span class="open_entry light_open_entry">>></span> Toggle navbar</h2>
+                <div class="entry_date light_entry_date">09.29.2021</div>
+                <p class="entry_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab expedita odio sunt similique impedit vero sit assumenda tempora, molestias vel, beatae minima! Voluptatem, autem illo itaque inventore laboriosam iste qui.</p>
+            </a></div>
 
-		<?php
-		if ( have_posts() ) {
+            <div class="entry_code light_entry_code">
+                <div class="code_type css">CSS</div>
+                <div class="code_container">
 
-			// Load posts loop.
-			while ( have_posts() ) {
-				the_post();
-				get_template_part( 'template-parts/content/content' );
-			}
+                    <pre class="code_format"><code>
+                        .navbar {
+                            position: fixed;
+                            top: 0;
+                            width: 100%;
+                            margin: 0;
+                            background-color: #e9ecef;
+                            font-family: 'Play', sans-serif;
+                        }
+                        
+                        .nav_container {
+                            margin: 20px;
+                        }
+                        
+                        .nav_title {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+                        
+                        .nav_logo {
+                            text-decoration: none;
+                            color: black;
+                        }
+                        
+                        .toggle_nav {
+                            height: 30px;
+                            width: 25px;
+                            cursor: pointer;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            float: right;
+                        }
+                    </code></pre>
+                    
+                </div>
+            </div>
 
-			// Previous/next page navigation.
-			twentynineteen_the_posts_navigation();
+            <div class="entry_code light_entry_code">
+                <div class="code_type js">JS</div>
+                <div class="code_container">
 
-		} else {
+                    <pre class="code_format"><code>
+                        class MobileNav {
+                            constructor() {
+                                this.toggleNavBtn = document.querySelector('.toggle_nav');
+                                this.navList = document.querySelector('.nav_list');
+                                this.toggleNav();
+                            }
 
-			// If no content, include the "No posts found" template.
-			get_template_part( 'template-parts/content/content', 'none' );
+                            toggleNav() {
+                                this.toggleNavBtn.addEventListener('click', () => {
+                                    this.navList.classList.toggle('nav_list_open');
+                                });
+                            }
 
-		}
-		?>
+                        }
 
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
+                        new MobileNav();
+                    </code></pre>
 
-<?php
-get_footer();
+                </div>
+            </div>
+        </div>
+        <hr class="entry_hr">
+        <!-- Entry ends  -->
+
+    </div>
+
+
+<?php get_footer(); ?>

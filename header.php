@@ -1,53 +1,63 @@
-<?php
-/**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage Twenty_Nineteen
- * @since Twenty Nineteen 1.0
- */
-?><!doctype html>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="profile" href="https://gmpg.org/xfn/11" />
-	<?php wp_head(); ?>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php wp_head(); ?>
 </head>
+<body class="light_theme" <?php body_class(); ?>>
 
-<body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentynineteen' ); ?></a>
+    <nav class="navbar light_navbar">    
+        <div class="nav_container">
 
-		<header id="masthead" class="<?php echo is_singular() && twentynineteen_can_show_post_thumbnail() ? 'site-header featured-image' : 'site-header'; ?>">
+            <div class="nav_title">
+                <div><h2><a href="index.html" class="light_nav_logo">Code-X</a></h2></div>
+                <div class="toggle_nav">
+                    <div class="line light_line"></div>
+                    <div class="line light_line"></div>
+                    <div class="line light_line"></div>
+                    <div class="line light_line"></div>
+                    
+                </div>
+            </div>
 
-			<div class="site-branding-container">
-				<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
-			</div><!-- .site-branding-container -->
+            <ul class="nav_list">
+                <li class="nav_li light_nav_li"><a href="" class="light_active_li">All</a></li>
+                <li class="nav_li light_nav_li"><a href="">CSS</a></li>
+                <li class="nav_li light_nav_li"><a href="">JavaScript</a></li>
 
-			<?php if ( is_singular() && twentynineteen_can_show_post_thumbnail() ) : ?>
-				<div class="site-featured-image">
-					<?php
-						twentynineteen_post_thumbnail();
-						the_post();
-						$discussion = ! is_page() && twentynineteen_can_show_post_thumbnail() ? twentynineteen_get_discussion_data() : null;
+                <div class="theme_btns light_theme_btn_style">
+                    <button class="light_theme_btn active_theme">Light</button>
+                    <button class="dark_theme_btn">Dark</button>
+                </div>
 
-						$classes = 'entry-header';
-					if ( ! empty( $discussion ) && absint( $discussion->responses ) > 0 ) {
-						$classes = 'entry-header has-discussion';
-					}
-					?>
-					<div class="<?php echo $classes; ?>">
-						<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
-					</div><!-- .entry-header -->
-					<?php rewind_posts(); ?>
-				</div>
-			<?php endif; ?>
-		</header><!-- #masthead -->
+            </ul>
 
-	<div id="content" class="site-content">
+            <div class="desk_search_div">
+                <hr>
+                <form action="">
+                    <input type="text" id="nav_search_bar" placeholder="Search....">
+                    <button id="submit_search">🔍</button>
+                </form>
+            </div>
+
+        </div>
+    </nav>
+    
+    <div class="prog_bar">
+        <div class="progression"></div>
+    </div>
+
+
+    <main>
+
+        <div class="mobile_heading"><h2><u>All Code</u></h2></div>
+        
+        <div class="mobile_search_div light_search_div">
+            <form action="">
+                
+                <input type="text" id="nav_search_bar" placeholder="Search....">
+                <button id="submit_search">🔍</button>
+            </form>
+        </div>

@@ -14,4 +14,4 @@ class MobileNav {
 
 }
 
-export default MobileNav; 
+new MobileNav();

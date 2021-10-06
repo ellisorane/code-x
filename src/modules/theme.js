@@ -18,6 +18,7 @@ class Theme {
         
         this.events();
         this.getLclStrgTheme();
+
     }
 
     events() {
@@ -32,7 +33,7 @@ class Theme {
 
     getLclStrgTheme() {
         let theme = localStorage.getItem("theme");
-        theme == 'dark' ? this.darkTheme() : this.lightTheme()
+        theme == 'dark' ? this.darkTheme() : this.lightTheme();
     }
 
     changeOne(el, add, remove) {
@@ -125,4 +126,4 @@ class Theme {
 
 }
 
-export default Theme;
+new Theme();

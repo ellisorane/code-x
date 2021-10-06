@@ -19,4 +19,4 @@ class MinMaxCode {
     }
 }
 
-export default MinMaxCode; 
+new MinMaxCode();

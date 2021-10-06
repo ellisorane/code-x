@@ -1,43 +1,27 @@
 {
-  "name": "twentynineteen",
-  "version": "2.1.0",
-  "description": "Default WP Theme",
-  "bugs": {
-    "url": "https://core.trac.wordpress.org/"
-  },
-  "homepage": "https://wordpress.org/themes/twentynineteen/",
-  "devDependencies": {
-    "@wordpress/browserslist-config": "^4.0.1",
-    "autoprefixer": "^9.8.6",
-    "chokidar-cli": "^2.1.0",
-    "node-sass": "^6.0.0",
-    "npm-run-all": "^4.1.5",
-    "postcss-cli": "^7.1.2",
-    "postcss-focus-within": "^4.0.0",
-    "rtlcss": "^3.2.0"
-  },
-  "rtlcssConfig": {
-    "options": {
-      "autoRename": false,
-      "autoRenameStrict": false,
-      "clean": true,
-      "greedy": false,
-      "processUrls": false,
-      "stringMap": []
-    },
-    "plugins": [],
-    "map": false
-  },
-  "browserslist": [
-    "extends @wordpress/browserslist-config"
-  ],
+  "name": "code-x",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "build:style": "node-sass style.scss style.css --output-style expanded && postcss -r style.css",
-    "build:style-editor": "node-sass style-editor.scss style-editor.css --output-style expanded && postcss -r style-editor.css",
-    "build:style-editor-customizer": "node-sass style-editor-customizer.scss style-editor-customizer.css --output-style expanded && postcss -r style-editor-customizer.css",
-    "build:rtl": "rtlcss style.css style-rtl.css",
-    "build:print": "node-sass print.scss print.css --output-style expanded && postcss -r print.css",
-    "build": "run-p \"build:*\"",
-    "watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial"
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "dev": "wp-scripts start",
+    "devFast": "wp-scripts start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ellisorane/code-x.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@glidejs/glide": "^3.4.1",
+    "@wordpress/scripts": "*",
+    "axios": "^0.21.4",
+    "jquery": "^3.6.0",
+    "jquery-migrate": "^3.3.2",
+    "normalize.css": "^8.0.1"
   }
 }
