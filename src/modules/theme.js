@@ -37,15 +37,21 @@ class Theme {
     }
 
     changeOne(el, add, remove) {
-        el.classList.add(add);
-        el.classList.remove(remove);
+        if (el) {
+            el.classList.add(add);
+            el.classList.remove(remove);
+        }
+        
     }
 
     changeAll(elements, add, remove) {
-        elements.forEach(el => {
-            el.classList.add(add);
-            el.classList.remove(remove);
-        });
+        if (elements) {
+            elements.forEach(el => {
+                el.classList.add(add);
+                el.classList.remove(remove);
+            });
+        }
+        
     }
 
     darkTheme() {
@@ -126,4 +132,4 @@ class Theme {
 
 }
 
-new Theme();
+export default Theme;

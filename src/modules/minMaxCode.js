@@ -1,7 +1,7 @@
 // Minimizes and opens code areas
 class MinMaxCode {
     constructor() {
-        this.sizeBtn = document.querySelectorAll('.code_type');
+        this.sizeBtn = document.querySelectorAll('.single_ctype');
         this.changeDisplay();
     }
 
@@ -19,4 +19,4 @@ class MinMaxCode {
     }
 }
 
-new MinMaxCode();
+export default MinMaxCode;

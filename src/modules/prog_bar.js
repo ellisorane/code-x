@@ -17,4 +17,4 @@ class ProgressBar {
 
 }
 
-new ProgressBar();
+export default ProgressBar;

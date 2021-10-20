@@ -44,6 +44,33 @@ main {
     padding: 150px 10px;
 }
 
+/* Custom scrollbar  */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  background: #545454; 
+
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffffff; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+  background: #f6f8f8; 
+
+} */
+
 @media (min-width: 1280px) {
 
     main {

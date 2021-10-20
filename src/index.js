@@ -9,7 +9,7 @@ const theme = new Theme();
 const progBar = new ProgressBar();
 const nav = new MobileNav();
 const minMax = new MinMaxCode();
-const codeFormat = new Code();
+// const codeFormat = new Code();
 
 
 

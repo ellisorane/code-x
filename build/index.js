@@ -1,12 +1,14 @@
 /******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/modules/CodeDisplay.js":
 /*!************************************!*\
   !*** ./src/modules/CodeDisplay.js ***!
   \************************************/
-/***/ (function() {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
+__webpack_require__.r(__webpack_exports__);
 class Code {
   constructor() {
     this.codeFormat = document.querySelectorAll('.code_format');
@@ -14,14 +16,15 @@ class Code {
   }
 
   formatCode() {
-    this.codeFormat.forEach(el => {
-      el.textContent = el.textContent.replace(/^\s+/mg, "");
+    this.codeFormat.forEach(el => {// el.textContent = el.textContent.replace(/^\s+/mg, "");
+      // const newDiv = el.textContent.replaceAll('<', '&lt;');
+      // const newDiv = el.textContent.replaceAll('div', 'jump');
     });
   }
 
 }
 
-new Code();
+/* harmony default export */ __webpack_exports__["default"] = (Code);
 
 /***/ }),
 
@@ -29,12 +32,13 @@ new Code();
 /*!***********************************!*\
   !*** ./src/modules/MinMaxCode.js ***!
   \***********************************/
-/***/ (function() {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
+__webpack_require__.r(__webpack_exports__);
 // Minimizes and opens code areas
 class MinMaxCode {
   constructor() {
-    this.sizeBtn = document.querySelectorAll('.code_type');
+    this.sizeBtn = document.querySelectorAll('.single_ctype');
     this.changeDisplay();
   }
 
@@ -49,7 +53,7 @@ class MinMaxCode {
 
 }
 
-new MinMaxCode();
+/* harmony default export */ __webpack_exports__["default"] = (MinMaxCode);
 
 /***/ }),
 
@@ -57,8 +61,9 @@ new MinMaxCode();
 /*!****************************!*\
   !*** ./src/modules/Nav.js ***!
   \****************************/
-/***/ (function() {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
+__webpack_require__.r(__webpack_exports__);
 class MobileNav {
   constructor() {
     this.toggleNavBtn = document.querySelector('.toggle_nav');
@@ -74,7 +79,7 @@ class MobileNav {
 
 }
 
-new MobileNav();
+/* harmony default export */ __webpack_exports__["default"] = (MobileNav);
 
 /***/ }),
 
@@ -82,8 +87,9 @@ new MobileNav();
 /*!*********************************!*\
   !*** ./src/modules/Prog_bar.js ***!
   \*********************************/
-/***/ (function() {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
+__webpack_require__.r(__webpack_exports__);
 class ProgressBar {
   constructor() {
     this.progression = document.querySelector('.progression');
@@ -103,7 +109,7 @@ class ProgressBar {
 
 }
 
-new ProgressBar();
+/* harmony default export */ __webpack_exports__["default"] = (ProgressBar);
 
 /***/ }),
 
@@ -111,8 +117,9 @@ new ProgressBar();
 /*!******************************!*\
   !*** ./src/modules/Theme.js ***!
   \******************************/
-/***/ (function() {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
+__webpack_require__.r(__webpack_exports__);
 class Theme {
   constructor() {
     this.lightThemeBtn = document.querySelector('.light_theme_btn');
@@ -148,15 +155,19 @@ class Theme {
   }
 
   changeOne(el, add, remove) {
-    el.classList.add(add);
-    el.classList.remove(remove);
+    if (el) {
+      el.classList.add(add);
+      el.classList.remove(remove);
+    }
   }
 
   changeAll(elements, add, remove) {
-    elements.forEach(el => {
-      el.classList.add(add);
-      el.classList.remove(remove);
-    });
+    if (elements) {
+      elements.forEach(el => {
+        el.classList.add(add);
+        el.classList.remove(remove);
+      });
+    }
   }
 
   darkTheme() {
@@ -209,7 +220,7 @@ class Theme {
 
 }
 
-new Theme();
+/* harmony default export */ __webpack_exports__["default"] = (Theme);
 
 /***/ })
 
@@ -240,35 +251,6 @@ new Theme();
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	!function() {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = function(module) {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				function() { return module['default']; } :
-/******/ 				function() { return module; };
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	}();
-/******/ 	
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	!function() {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = function(exports, definition) {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	}();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	!function() {
-/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
-/******/ 	}();
-/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	!function() {
 /******/ 		// define __esModule on exports
@@ -282,34 +264,27 @@ new Theme();
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 !function() {
-"use strict";
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_Theme__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/Theme */ "./src/modules/Theme.js");
-/* harmony import */ var _modules_Theme__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_Theme__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _modules_Prog_bar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/Prog_bar */ "./src/modules/Prog_bar.js");
-/* harmony import */ var _modules_Prog_bar__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_Prog_bar__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _modules_Nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/Nav */ "./src/modules/Nav.js");
-/* harmony import */ var _modules_Nav__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_Nav__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _modules_MinMaxCode__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/MinMaxCode */ "./src/modules/MinMaxCode.js");
-/* harmony import */ var _modules_MinMaxCode__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_MinMaxCode__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _modules_CodeDisplay__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/CodeDisplay */ "./src/modules/CodeDisplay.js");
-/* harmony import */ var _modules_CodeDisplay__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_CodeDisplay__WEBPACK_IMPORTED_MODULE_4__);
 
 
 
  // Need to work on how code is displayed
 
 
-const theme = new (_modules_Theme__WEBPACK_IMPORTED_MODULE_0___default())();
-const progBar = new (_modules_Prog_bar__WEBPACK_IMPORTED_MODULE_1___default())();
-const nav = new (_modules_Nav__WEBPACK_IMPORTED_MODULE_2___default())();
-const minMax = new (_modules_MinMaxCode__WEBPACK_IMPORTED_MODULE_3___default())();
-const codeFormat = new (_modules_CodeDisplay__WEBPACK_IMPORTED_MODULE_4___default())();
+const theme = new _modules_Theme__WEBPACK_IMPORTED_MODULE_0__["default"]();
+const progBar = new _modules_Prog_bar__WEBPACK_IMPORTED_MODULE_1__["default"]();
+const nav = new _modules_Nav__WEBPACK_IMPORTED_MODULE_2__["default"]();
+const minMax = new _modules_MinMaxCode__WEBPACK_IMPORTED_MODULE_3__["default"](); // const codeFormat = new Code();
 }();
 /******/ })()
 ;

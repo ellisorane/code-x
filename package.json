@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "wp-scripts build",
-    "start": "wp-scripts start",
-    "dev": "wp-scripts start",
-    "devFast": "wp-scripts start"
+    "start": "wp-scripts start"
   },
   "repository": {
     "type": "git",
@@ -17,11 +15,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@glidejs/glide": "^3.4.1",
     "@wordpress/scripts": "*",
-    "axios": "^0.21.4",
-    "jquery": "^3.6.0",
-    "jquery-migrate": "^3.3.2",
+    "nodemon": "^2.0.14",
     "normalize.css": "^8.0.1"
   }
 }
