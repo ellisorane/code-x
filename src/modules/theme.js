@@ -10,7 +10,7 @@ class Theme {
         this.toggleNavLines = document.querySelectorAll('.line');
         this.navLi = document.querySelectorAll('.nav_li');
         this.activeLi = document.querySelector('.light_active_li');
-        this.mobileSearchDiv = document.querySelector('.mobile_search_div');
+        // this.mobileSearchDiv = document.querySelector('.mobile_search_div');
         this.openEntryBtn = document.querySelectorAll('.open_entry');
         this.entryDate = document.querySelectorAll('.entry_date');
         this.entryCode = document.querySelectorAll('.entry_code');
@@ -78,7 +78,7 @@ class Theme {
         this.changeOne(this.activeLi, 'dark_active_li', 'light_active_li');
         
         //Change mobile search bar
-        this.mobileSearchDiv.classList.remove('light_search_div');
+        // this.mobileSearchDiv.classList.remove('light_search_div');
 
         this.changeAll(this.openEntryBtn, 'dark_open_entry', 'light_open_entry');
 
@@ -112,9 +112,8 @@ class Theme {
         this.changeAll(this.navLi, 'light_nav_li', 'dark_nav_li');
         this.changeOne(this.activeLi, 'light_active_li', 'dark_active_li');
         
-        //Change mobile search bar
-        
-        this.mobileSearchDiv.classList.remove('light_search_div');
+        // Change mobile search bar
+        // this.mobileSearchDiv.classList.remove('light_search_div');
 
         this.changeAll(this.openEntryBtn, 'light_open_entry', 'dark_open_entry');
 

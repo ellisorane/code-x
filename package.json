@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@wordpress/scripts": "*",
+    "axios": "^0.23.0",
     "nodemon": "^2.0.14",
     "normalize.css": "^8.0.1"
   }

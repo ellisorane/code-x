@@ -7,7 +7,7 @@
 
     <div class="entries_container">
 
-    <h1>JS Entries</h1>
+    <h2 class="page_headings"><u>JS Entries</u></h2>
     <?php include 'inc/js_entries_filter.php'; ?>
 
     </div>

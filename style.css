@@ -4,7 +4,10 @@
     Version: 1.0
 */
 
-@import url('css/nav/nav.css');
+@import url('css/nav.css');
+@import url('css/loader.css');
+@import url('css/search_bar_results.css');
+@import url('css/search_results.css');
 @import url('css/prog_bar.css');
 @import url('css/entry.css');
 @import url('css/single_entry.css');
@@ -35,7 +38,7 @@ html, body {
     white-space: pre-wrap;
 }
 
-.mobile_heading {
+.mobile_heading, .page_headings {
     font-family: 'Play', sans-serif;
     text-transform: uppercase;
 }

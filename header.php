@@ -10,6 +10,12 @@
 </head>
 <body class="light_theme" <?php body_class(); ?>>
 
+    <!-- <?php
+    wp_nav_menu( array( 
+        'theme_location' => 'main-nav', 
+        'container_class' => 'navbar' ) ); 
+    ?> -->
+
     <nav class="navbar light_navbar">    
         <div class="nav_container">
 
@@ -37,13 +43,24 @@
 
             </ul>
 
-            <div class="desk_search_div">
+            <!-- <div class="desk_search_div">
                 <hr>
                 <form action="">
-                    <input type="text" id="nav_search_bar" placeholder="Search....">
-                    <button id="submit_search">🔍</button>
+                    <div class="search_form">
+                        <input type="text" class="search_input desktop_input" placeholder="Search....">
+                        <button id="submit_search">🔍</button>
+                    </div>
                 </form>
+                
+                <div class="search_results_div">
+                    <ul class="results"></ul>
+                </div> 
+            </div> -->
+            <div class="desk_search_div">
+                <hr>
+                <?php include "searchform.php"; ?>
             </div>
+
 
         </div>
     </nav>
@@ -55,13 +72,20 @@
 
     <main>
 
-        <div class="mobile_heading"><h2><u>All Code</u></h2></div>
         
-        <div class="mobile_search_div light_search_div">
+        <!-- <div class="mobile_search_div light_search_div">
             <form action="">
-                
-                <input type="text" id="nav_search_bar" placeholder="Search....">
+                <input type="text" class="search_input mobile_input" placeholder="Search....">
                 <button id="submit_search">🔍</button>
             </form>
-        </div>
+            <div class="search_results_div">
+                    <ul class="results"></ul>
+                </div>
+        </div> -->
+        <?php if(get_post_type() === 'page') { ?>
+            <div class="mobile_search_div light_search_div">
+                <?php include "searchform.php"; ?>
+            </div>
+        <?php
+        } ?>
 

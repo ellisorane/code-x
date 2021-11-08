@@ -1,0 +1,11 @@
+/* search.php Template and content-search.php */
+
+.content_div {
+    margin: 10px;
+}
+
+.result_link {
+    color: inherit;
+    text-decoration: none;
+    margin: 0 20px;
+}

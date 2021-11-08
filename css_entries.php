@@ -7,7 +7,7 @@
 
     <div class="entries_container">
 
-    <h1>CSS Entries</h1>
+    <h2 class="page_headings"><u>CSS Entries</u></h2>
 
     <?php include 'inc/css_entries_filter.php'; ?>
 
