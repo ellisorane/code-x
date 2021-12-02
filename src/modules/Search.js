@@ -62,13 +62,11 @@ class Search {
             });
 
         } catch (err) {
-            console.error('Search Failed')
+            console.error('Search Failed');
             console.log(err);
         }
 
     }
-    
-
 
 }
 

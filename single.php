@@ -10,7 +10,7 @@
             <div class="code_info">
                 <h1 class="single_entry_title"><?php the_title(); ?></h1>
                 <div class="entry_date light_entry_date"><?php the_time('M j, Y'); ?></div>
-                <div class="single_entry_code_desc"><?php echo wp_trim_words(get_field("code_description"), 10); ?></div>
+                <div class="single_entry_code_desc"><?php echo get_field("code_description"); ?></div>
             </div>
 
             <!-- HTML  -->
