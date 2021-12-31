@@ -43,19 +43,7 @@
 
             </ul>
 
-            <!-- <div class="desk_search_div">
-                <hr>
-                <form action="">
-                    <div class="search_form">
-                        <input type="text" class="search_input desktop_input" placeholder="Search....">
-                        <button id="submit_search">🔍</button>
-                    </div>
-                </form>
-                
-                <div class="search_results_div">
-                    <ul class="results"></ul>
-                </div> 
-            </div> -->
+        
             <div class="desk_search_div">
                 <hr>
                 <?php include "searchform.php"; ?>
@@ -72,20 +60,10 @@
 
     <main>
 
-        
-        <!-- <div class="mobile_search_div light_search_div">
-            <form action="">
-                <input type="text" class="search_input mobile_input" placeholder="Search....">
-                <button id="submit_search">🔍</button>
-            </form>
-            <div class="search_results_div">
-                    <ul class="results"></ul>
-                </div>
-        </div> -->
-        <?php if(get_post_type() === 'page') { ?>
-            <div class="mobile_search_div light_search_div">
-                <?php include "searchform.php"; ?>
-            </div>
+        <?php // if(get_post_type() === 'page') { ?>
+            <!-- <div class="mobile_search_div light_search_div">
+                <?php // include "searchform.php"; ?>
+            </div> -->
         <?php
-        } ?>
+        // } ?>
 
