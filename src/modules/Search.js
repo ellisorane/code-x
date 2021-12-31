@@ -14,39 +14,12 @@ class Search {
     }
 
     onType() {
-        // this.searchInput.forEach(input => input.addEventListener('input', this.typingLogic.bind(this)));
         this.searchInput.addEventListener('input', this.typingLogic.bind(this));
     };
 
 
     typingLogic() {
-        // this.searchInput.forEach(input => {
-
-        //     // If current input is different from the previous input
-        // if (input.value != this.prevKey || input.value != "") {
-
-        //     // clear list after each key
-        //     this.searchResultsUl.forEach(div => div.innerHTML = '');
-            
-        //     // Reset timer after each key
-        //     clearTimeout(this.typingTimer);
-
-        //     // If the search bar gets an  input
-        //     if (input.value) {
-        //         // PROBLEM AREA!!!!!!!!!!!!!!!!!!!!!!! FIGURE THIS OUT !!!!!!!!!!!!!!!!!!!!!!
-        //         // Run the getResults function after 1 sec of a keypress
-        //         this.typingTimer = setTimeout(this.getResults(input.value), 1000);
-        //     }
-
-        // } else {
-        //     // Clear search results
-        //     this.searchResultsUl.forEach(div => div.innerHTML = '');
-
-        // }
-
-        //     this.prevKey = input.value;
-        // })
-        
+       
         // If current input is different from the previous input
         if (this.searchInput.value != this.prevKey || this.searchInput.value != "") {
 
@@ -56,9 +29,8 @@ class Search {
             // Reset timer after each key
             clearTimeout(this.typingTimer);
 
-            // If the search bar gets an  searchInput
+            // If the search bar gets an input
             if (this.searchInput.value) {
-                // PROBLEM AREA!!!!!!!!!!!!!!!!!!!!!!! FIGURE THIS OUT !!!!!!!!!!!!!!!!!!!!!!
                 // Run the getResults function after 1 sec of a keypress
                 this.typingTimer = setTimeout(this.getResults.bind(this), 500);
             }
